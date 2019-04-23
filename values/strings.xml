@@ -1,0 +1,18 @@
+<resources>
+    <string name="unit_details" translatable="false">单位详情</string>
+    <string name="company_name" translatable="false">上海云合投资管理有限公司</string>
+    <string name="link_name" translatable="false">默认联系人：</string>
+    <string name="phone" translatable="false">联系电话：000000</string>
+    <string name="address" translatable="false">单位地址：上海浦东新区东方路985号一百杉杉大厦</string>
+    <string name="app_name" translatable="false">orderin</string>
+    <string name="button_delete" translatable="false">删除</string>
+    <string name="button_add" translatable="false">添加新拜访</string>
+    <string name="button_visit_record" translatable="false">拜访记录</string>
+    <string name="button_history_order" translatable="false">历史订单</string>
+    <string name="button_entry_exit_item" translatable="false">出入库明细</string>
+    <string name="button_login" translatable="false">登录</string>
+    <string name="button_regsiter" translatable="false">注册</string>
+    <string name="edit_username" translatable="false">用户名</string>
+    <string name="edit_code" translatable="false">验证码</string>
+    <string name="edit_checkcode" translatable="false">请输入验证码</string>
+</resources>

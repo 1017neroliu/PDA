@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 相对布局
+    android:layout_width="match_parent"
+        布局的宽度，值：fill_parent或match_parent填满父容器，wrap_content组件实际大小
+    android:background="@color/colorPrimary"
+        为该组件设置一个背景图片，或如上，直接用颜色覆盖
+    android:fitsSystemWindows="true"
+        设置状态栏适配
+    xmlns:命名空间
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fitsSystemWindows="true"
+    android:background="@color/gray"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- android:id="@+id/topbar"
+            为该组件设置一个资源id，在java文件中可以找到这个组件
+         include包含其他布局
+     -->
+    <include
+        android:id="@+id/topbar"
+        layout="@layout/layout_top_bar"/>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/company_item"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@id/topbar"
+        android:background="@drawable/shape_corner"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/customer_manager"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="60dp"
+            android:layout_marginLeft="-250dp"
+            android:layout_toLeftOf="@+id/company"
+            android:background="@drawable/customer_manager"/>
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/company"
+            android:layout_width="300dp"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/c_name"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/company_name"
+                android:layout_marginBottom="6dp"/>
+            <TextView
+                android:id="@+id/l_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/link_name"
+                android:textSize="12sp"
+                android:layout_below="@+id/c_name"
+                android:layout_marginBottom="3dp"/>
+            <TextView
+                android:id="@+id/l_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/phone"
+                android:textSize="12sp"
+                android:layout_below="@+id/l_name"
+                android:layout_marginBottom="3dp"/>
+            <TextView
+                android:id="@+id/l_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/address"
+                android:textSize="12sp"
+                android:layout_below="@+id/l_phone"
+                android:layout_marginBottom="6dp"/>
+            <ImageButton
+                android:id="@+id/pull"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/pull"
+                android:layout_below="@+id/l_address"
+                android:layout_centerHorizontal="true"
+                />
+        </RelativeLayout>
+
+        <ImageButton
+            android:id="@+id/edit"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginBottom="60dp"
+            android:layout_marginRight="-300dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/company"
+            android:background="@drawable/edit" />
+
+    </RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/view_pager1"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@+id/company_item"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/visit_record"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/history_order"
+            android:gravity="center"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:text="@string/button_visit_record" />
+
+        <TextView
+            android:id="@+id/history_order"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:text="@string/button_history_order" />
+
+        <TextView
+            android:id="@+id/entry_out"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/history_order"
+            android:gravity="center"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:text="@string/button_entry_exit_item" />
+
+    </RelativeLayout>
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/view_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_bar"
+        android:layout_below="@id/view_pager1"
+        android:background="@color/white">
+        </RelativeLayout>
+
+    <include
+        android:id="@+id/bottom_bar"
+        layout="@layout/layout_bottom_bar"/>
+</RelativeLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--state_window_focused="false" 应用程序是否在前台
+        android:state_enabled="true" 能够接受触摸或者点击事件
+        android:state_pressed="true" 是否按下，如一个按钮触摸或点击
+        android:state_focused="true" 是否取得焦点
+    -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_window_focused="false" android:state_enabled="true"
+        android:drawable="@+id/visit_record" />
+    <item android:state_enabled="false" android:drawable="@+id/visit_record" />
+    <item android:state_pressed="true" android:drawable="@+id/visit_record" />
+    <item android:state_focused="true"  android:drawable="@+id/visit_record" />
+
+    <item android:state_window_focused="false" android:state_enabled="true"
+        android:drawable="@+id/history_order" />
+    <item android:state_enabled="false" android:drawable="@+id/history_order" />
+    <item android:state_pressed="true" android:drawable="@+id/history_order" />
+    <item android:state_focused="true"  android:drawable="@+id/history_order" />
+
+    <item android:state_window_focused="false" android:state_enabled="true"
+        android:drawable="@+id/entry_out" />
+    <item android:state_enabled="false" android:drawable="@+id/entry_out" />
+    <item android:state_pressed="true" android:drawable="@+id/entry_out" />
+    <item android:state_focused="true"  android:drawable="@+id/entry_out" />
+</selector>

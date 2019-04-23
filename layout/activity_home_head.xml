@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/home_head"
+    android:layout_width="match_parent"
+    android:layout_height="?android:actionBarSize"
+    android:orientation="vertical"
+    android:elevation="1dp"
+    android:background="@color/colorPrimary">
+    <!-- dp:设备独立像素
+         android:layout_margin="4dp"
+            设置上下左右的偏移量
+         下面这个TextView是设置返回键
+    -->
+    <TextView
+        android:id="@+id/select_warehouse"
+        android:layout_width="72dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:text="选择仓库"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+         />
+
+
+    <TextView
+        android:id="@+id/shouye_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="8dp"
+        android:gravity="center"
+        android:text="首页"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        />
+
+    <ImageButton
+        android:id="@+id/image_btn_scan1"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="130dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@id/shouye_title"
+        android:background="@drawable/saoma"></ImageButton>
+</RelativeLayout>

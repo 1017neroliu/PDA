@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_home"
+        android:icon="@drawable/home_gray"
+        android:title="首页" />
+    <item
+        android:id="@+id/menu_warehouse"
+        android:icon="@drawable/warehouse_gray"
+        android:title="仓库" />
+    <item
+        android:id="@+id/menu_performance"
+        android:icon="@drawable/performance_gray"
+        android:title="绩效" />
+
+    <item
+        android:id="@+id/menu_base"
+        android:icon="@drawable/base_gray"
+        android:title="基础" />
+    <item
+        android:id="@+id/menu_setting"
+        android:icon="@drawable/set_gray"
+        android:title="设置" />
+
+</menu>
