@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/welcome_background">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="122dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/logo" />
+        <ImageView
+        android:id="@+id/saomaqiang"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="35dp"
+        android:layout_below="@+id/logo"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/saomaqiang" />
+        <TextView
+            android:id="@+id/tct"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/saomaqiang"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="173dp"
+            android:layout_marginBottom="19dp"
+            android:paddingLeft="60dp"
+            android:paddingTop="20dp"
+            android:text="TCT Consulting"
+            android:textSize="12sp"
+            android:textColor="@color/gray"
+            />
+
+</RelativeLayout>

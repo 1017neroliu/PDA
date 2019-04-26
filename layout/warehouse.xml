@@ -1,9 +1,299 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    android:orientation="vertical"
+    >
 
     <include
-        android:id="@+id/normal_bottom"
-        layout="@layout/toolbar_home"/>
-</RelativeLayout>
+        android:id="@+id/warehouse"
+        layout="@layout/warehouse_top"
+        />
+
+    <TableLayout
+        android:id="@+id/TableLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp" >
+        <TableRow>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                >
+                <TextView
+                    android:id="@+id/jinriruku_quan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:text="20"
+                    android:textSize="20sp"
+                    android:textColor="@drawable/red"
+                    />
+                <TextView
+                    android:id="@+id/jinriruku"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_below="@+id/jinriruku_quan"
+                    android:text="今日订单"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                >
+                <TextView
+                    android:id="@+id/jinrichuku_quan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:text="20"
+                    android:textSize="20sp"
+                    android:textColor="@drawable/change_color"
+                    />
+                <TextView
+                    android:id="@+id/jinrichuku"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/jinrichuku_quan"
+                    android:layout_centerInParent="true"
+                    android:textStyle="bold"
+                    android:text="未审核"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                >
+                <TextView
+                    android:id="@+id/kucunbuzu_quan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:text="20"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorAccent"
+                    />
+                <TextView
+                    android:id="@+id/kucunbuzu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/kucunbuzu_quan"
+                    android:layout_centerInParent="true"
+                    android:textStyle="bold"
+                    android:text="被驳回"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                >
+                <TextView
+                    android:id="@+id/kucunguoduo_quan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:text="20"
+                    android:textSize="20sp"
+                    android:textColor="@color/color_storage"
+                    />
+                <TextView
+                    android:id="@+id/kucunguoduo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/kucunguoduo_quan"
+                    android:layout_centerInParent="true"
+                    android:textStyle="bold"
+                    android:text="已完成"/>
+            </RelativeLayout>
+        </TableRow>
+    </TableLayout>
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_below="@+id/TableLayout"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/po"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <ImageView
+                android:id="@+id/po_picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/po" />
+
+            <TextView
+                android:id="@+id/po_word"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/po_picture"
+                android:text="采购订单"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="250dp"
+                android:layout_toRightOf="@+id/po_word"
+                android:src="@drawable/jiantou_zuo" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/so"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/po">
+
+            <ImageView
+                android:id="@+id/so_picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/so_picture" />
+
+            <TextView
+                android:id="@+id/so_word"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/so_picture"
+                android:text="销售订单"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="250dp"
+                android:layout_toRightOf="@+id/so_word"
+                android:src="@drawable/jiantou_zuo" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/application"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/so">
+
+            <ImageView
+                android:id="@+id/application_picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/application_picture" />
+
+            <TextView
+                android:id="@+id/application_word"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/application_picture"
+                android:text="领用申请"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="250dp"
+                android:layout_toRightOf="@+id/application_word"
+                android:src="@drawable/jiantou_zuo" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/myorder"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/application">
+
+            <ImageView
+                android:id="@+id/myorder_picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/myorder" />
+
+            <TextView
+                android:id="@+id/myorder_word"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/myorder_picture"
+                android:text="我的订单"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="250dp"
+                android:layout_toRightOf="@+id/myorder_word"
+                android:src="@drawable/jiantou_zuo" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/historyorder"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/myorder">
+
+            <ImageView
+                android:id="@+id/historyorder_picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/history" />
+
+            <TextView
+                android:id="@+id/historyorder_word"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/historyorder_picture"
+                android:text="历史订单"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="250dp"
+                android:layout_toRightOf="@+id/historyorder_word"
+                android:src="@drawable/jiantou_zuo" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        >
+<include
+    android:id="@+id/home_foot_res"
+    layout="@layout/activity_home_foot"
+    />
+    </RelativeLayout>
+</LinearLayout>

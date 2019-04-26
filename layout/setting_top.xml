@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/unit_bar"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@color/colorPrimary">
+    <!-- dp:设备独立像素
+         android:layout_margin="4dp"
+            设置上下左右的偏移量
+         下面这个TextView是设置返回键
+    -->
+    <ImageView
+        android:id="@+id/user_image"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/geren"
+         />
+    <RelativeLayout
+        android:id="@+id/name_andjob"
+        android:layout_toRightOf="@+id/user_image"
+        android:layout_marginLeft="10dp"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/myname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jionn"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="首席架构师"
+            android:layout_below="@+id/myname"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            />
+    </RelativeLayout>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="270dp"
+        android:layout_toRightOf="@+id/name_andjob"
+        android:src="@drawable/jiantou_zuo" />
+</RelativeLayout>

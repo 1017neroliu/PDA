@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/unit_bar"
+    android:layout_width="match_parent"
+    android:layout_height="?android:actionBarSize"
+    android:background="@color/colorPrimary">
+    <!-- dp:设备独立像素
+         android:layout_margin="4dp"
+            设置上下左右的偏移量
+         下面这个TextView是设置返回键
+    -->
+    <TextView
+        android:id="@+id/return_key"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_centerVertical="true"
+        android:layout_margin="4dp"
+        android:background="@drawable/ic_keyboard_arrow_left_24dp"
+        android:padding="4dp" />
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/return_key"
+        android:layout_toLeftOf="@id/empty"
+        android:gravity="center"
+        android:text="我的任务"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/empty"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="4dp"
+        android:padding="4dp" />
+</RelativeLayout>

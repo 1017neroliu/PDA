@@ -71,7 +71,7 @@
         android:layout_toRightOf="@id/img3"
         android:layout_marginLeft="10dp"
         android:textColor="#FFFFFF"
-        android:text="密码"
+        android:text="密 码"
         />
     <EditText
         android:id="@+id/et2"
