@@ -3,19 +3,20 @@
     package="com.example.cipherlab">
 
     <application
-        android:allowBackup="true"
+        android:allowBackup="true"//安全风险描述，提供了为应用程序数据的备份和恢复
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
+        android:supportsRtl="true"//是否支持从右到左的布局
         android:theme="@style/AppTheme">
 
 
-        <activity android:name=".MainActivityTest">
+        <activity android:name=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN" />//指定响应的动作名，最先启动的Activity
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER" />//范畴，在什么环境下动作被影响
+                //android.intent.category.LAUNCHER决定应用程序是否显示在程序列表里
             </intent-filter>
         </activity>
     </application>
